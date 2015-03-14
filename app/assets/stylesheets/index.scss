@@ -1,0 +1,68 @@
+$bg-color: rgba(237, 237, 237, 0.78);
+$primary: #7CCD32;
+$secondary: #9C9DA1;
+
+
+[class^="col-"],
+[class*=" col-"] {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: $bg-color;
+}
+
+.top {
+  background-color: white;
+}
+
+#time-divider {
+  color: $primary;
+}
+
+#page-title{
+  border-right: 1px solid $bg-color;
+}
+
+#logo {
+  width: 180px;
+  padding: 10px 20px 10px 5px;
+}
+
+.logo-container {
+  background-color: $primary;
+}
+
+.title-light {
+  font-weight: 300;
+}
+
+.title-heavy {
+  font-weight: 700;
+}
+
+.section-heading {
+  margin-top: 0px;
+}
+
+.community-btn {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 0;
+  color: white;
+  font-weight:300;
+  background-color: $secondary;
+  border: none;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: white;
+    background-color: $primary;
+  }
+}
