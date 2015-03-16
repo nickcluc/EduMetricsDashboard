@@ -1,0 +1,20 @@
+<header class="navbar top">
+  <div class="row">
+    <div class="top">
+      <div class="col-md-3 logo-container">
+        <%= image_tag "logo-transparent.png", class: "img-responsive", id: "logo" %>
+      </div>
+      <div class="col-md-6" id="page-title">
+        <h1 style="font-size: 44px; margin-top:10px; margin-left:10px;">
+          <span class="title-heavy">LIVE</span><span class="title-light">DASHBOARD</span>
+        </h1>
+      </div>
+      <div class="divider">
+
+      </div>
+      <div class="col-md-3" id="page-time">
+        <h2 class="title-light text-center" style="font-size: 22px;"><%= Time.now.strftime("%a %b %e ") %><span id="time-divider">|</span><%= Time.now.strftime(" %l:%M %p") %></h2>
+      </div>
+    </div>
+  </div>
+</header>

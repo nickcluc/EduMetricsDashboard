@@ -13,3 +13,16 @@
  *= require_self
  *= require_tree .
  */
+
+ .nano {
+   height: 100px;
+ }
+ .nano .nano-content {
+
+ }
+ .nano .nano-pane   {
+   background: #888;
+ }
+ .nano .nano-slider {
+   background: #111;
+ }

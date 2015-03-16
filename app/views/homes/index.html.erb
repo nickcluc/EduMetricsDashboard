@@ -1,95 +1,24 @@
 <div class="container">
-  <header class="navbar top">
-    <div class="row">
-      <div class="top">
-        <div class="col-md-2 logo-container">
-          <%= image_tag "logo-transparent.png", id: "logo" %>
-        </div>
-        <div class="col-md-6" id="page-title">
-          <h1 style="font-size: 44px; margin-top:10px; margin-left:10px;"><span class="title-heavy">LIVE</span><span class="title-light">DASHBOARD</span></h1>
-        </div>
-        <div class="divider">
-
-        </div>
-        <div class="col-md-4">
-          <h2 class="title-light"><%= Time.now.strftime("%a %b %e ") %><span id="time-divider">|</span><%= Time.now.strftime(" %l:%M %p") %></h2>
-        </div>
-      </div>
-    </div>
-  </header>
+  <%= render "top_bar" %>
   <div class="row">
-    <div class="col-md-2 sidebar">
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <h5>Our School</h5>
-          <ul class="nav">
-            <li>Founders Memorial</li>
-            <li class="active">Essex Elementary</li>
-            <li>Essex Highschool</li>
-          </ul>
-
-        </div>
-      </div>
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <h5>Our People</h5>
-
-
-        </div>
-      </div>
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <h5>Tags</h5>
-
-
-        </div>
-      </div>
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <h5>My Groups</h5>
-
-
-        </div>
-      </div>
+    <div class="col-md-3">
+      <%= render"side_panel" %>
     </div>
-    <div class="col-md-5">
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <div class="col-md-6">
-            <h3 class="section-heading" class="section-heading"><b>COMMUNITY</b></h3>
-          </div>
-          <div class="col-md-6">
-            <span><small>Period</small></span>
-            <div class="pull-right">
-              <button type="button" class="community-btn right">T</button>
-              <button type="button" class="community-btn right">7</button>
-              <button type="button" class="community-btn right">30</button>
-              <button type="button" class="community-btn right">YR</button>
-              <button type="button" class="community-btn right"><span class="glyphicon glyphicon-calendar"></span></button>
-            </div>
-          </div>
-        </div>
+    <div class="col-md-9" style="padding-left:0;">
+      <div class="col-md-6">
+        <%= render "community" %>
+        <%= render "live_questions" %>
       </div>
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <h3 class="section-heading"><b>LIVE</b><span class="title-light">QUESTIONS</span></h3>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-5">
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <h3 class="section-heading"><b>DISPLAY</b></h3>
-
-        </div>
-      </div>
-      <div class="panel panel-no-border">
-        <div class="panel-body">
-          <h3 class="section-heading"><b>RESULTS</b></h3>
-
-        </div>
+      <div class="col-md-6">
+        <%= render "display" %>
+        <%= render "results" %>
       </div>
     </div>
   </div>
 </div>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<script charset="utf-8">
+
+</script>
