@@ -1,0 +1,72 @@
+<div class="panel panel-no-border">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="section-heading"><b>LIVE</b><span class="title-light">QUESTIONS</span></h3>
+      </div>
+      <div class="col-md-6">
+        <span class="pull-right"><small>Weekly Limit <span class="highlighted">5 Left out of 20</span></small></span>
+      </div>
+    </div>
+    <form class="form-horizontal" id="questions-form">
+      <div class="form-group">
+        <div class="col-md-2">
+          <label for="text-input" class="pull-right">Text</label>
+        </div>
+        <div class="col-md-10">
+          <textarea class="form-control" id="text-input" rows="6"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-2">
+          <label for="text-input" class="pull-right text-right">Response Options</label>
+        </div>
+        <div class="col-md-10">
+          <input class="form-control" id="response-options">
+          <input class="form-control" id="response-options">
+          <input class="form-control" id="response-options">
+          <input class="form-control" id="response-options">
+          <input class="form-control" id="response-options">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-2">
+          <label for="scheduling" class="pull-right">Schedule</label>
+        </div>
+        <div class="col-md-10">
+          <input type="button" value="SEND NOW">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-10 col-md-offset-2">
+          <div class="col-md-2" style="margin:5px;">
+            <label for="scheduleQuestion" style="font-size: 11px;">SEND LATER</label>
+          </div>
+          <div class="col-md-1">
+            <button type="button" class="calendar-toggle-btn" id="cal-button">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </button>
+          </div>
+          <div class="col-md-8 toggle">
+            <div class="col-md-12">
+              <small>YOUR MESSAGE WILL BE SENT</small>
+            </div>
+            <div class="col-md-12">
+              <b><small><span id="date"><%= Time.now.strftime("%A, %B %e, %Y") %></span></small></b>
+            </div>
+          </div>
+        </div>
+        <div class="form-group toggle">
+          <div class="col-md-8 col-md-offset-4">
+            <div class="col-md-6" id="calendar-container">
+              <div id="datetimepicker1"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="bfh-timepicker" data-mode="12h" id="timepicker"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

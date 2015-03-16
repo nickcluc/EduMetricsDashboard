@@ -1,4 +1,5 @@
-$bg-color: rgba(237, 237, 237, 0.78);
+$bg-color: #F3F3F3;
+
 $primary: #7CCD32;
 $secondary: #9C9DA1;
 
@@ -15,7 +16,16 @@ body {
 }
 
 .top {
+  height: 80px;
   background-color: white;
+  border-top-width: 0px;
+}
+
+#page-time {
+  height:80px;
+  h2 {
+    padding-top: 10px;
+  }
 }
 
 #time-divider {
@@ -23,16 +33,21 @@ body {
 }
 
 #page-title{
-  border-right: 1px solid $bg-color;
+  height: 80px;
+  padding-top: 5px;
+  border-right: 2px solid $bg-color;
 }
 
 #logo {
-  width: 180px;
-  padding: 10px 20px 10px 5px;
+  height: 90%;
+  padding-top: 10px;
+  padding-left: 38px;
+
 }
 
 .logo-container {
   background-color: $primary;
+  height: 80px;
 }
 
 .title-light {
@@ -47,9 +62,10 @@ body {
   margin-top: 0px;
 }
 
+
 .community-btn {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   border-radius: 0;
   color: white;
@@ -65,4 +81,223 @@ body {
     color: white;
     background-color: $primary;
   }
+  small {
+    font-size: 10px;
+  }
+}
+
+.options-panel {
+  background-color: $bg-color;
+  margin-bottom: 0;
+}
+
+.panel {
+  // border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+#resultsSearchInput {
+  width: 150px;
+}
+
+.chart-options {
+  padding-left: 10px;
+}
+
+.highlighted {
+  padding: 5px 30px 5px 5px;
+  color: white;
+  background-color: $primary;
+}
+
+.dow {
+  display: none;
+}
+
+.calendar-toggle-btn {
+  @extend .community-btn;
+  height: 30px;
+  width: 30px;
+}
+
+.toggle {
+  display: none;
+}
+
+.accordion-toggle {
+  display: none;
+}
+
+.timepicker-picker .btn {
+  display: none;
+}
+
+#timepicker {
+  right: auto;
+  padding-left: 0px;
+  left: 12px;
+}
+
+#questions-form input {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 2px;
+  box-shadow: none;
+  background-color: $bg-color;
+}
+
+#questions-form textarea {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 2px;
+  box-shadow: none;
+  background-color: $bg-color;
+}
+.input-group-addon {
+  display: none;
+}
+.c3 svg {
+  font-family: "Lato", sans-serif;
+}
+.c3-ygrid {
+  stroke-dasharray: none;
+}
+.c3-ygrid line {
+  stroke: $secondary;
+}
+hr {
+  border-top: 2px solid #C7C8CA;
+}
+.results-title {
+  display: block;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.circle {
+  display: inline-block;
+  margin-right: 5px;
+	width: 10px;
+	height: 10px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+
+#resilience {
+  background-color: #00ABE8;
+}
+
+#inactive-circle {
+  background-color: $secondary;
+}
+
+#safety {
+  background-color: #FD0076;
+}
+
+#relationships {
+  background-color: $primary;
+}
+.equal {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+#searchbox {
+  border: none;
+  border-radius: 0;
+  margin-bottom: 2px;
+  box-shadow: none;
+  background-color: $bg-color;
+}
+
+.scrollable-menu {
+  background-color: bg-color;
+  padding-left: 0;
+  height: auto;
+  max-height: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-bottom:0;
+}
+
+.custom-panel-body {
+  padding:10px;
+  h6 {
+    margin-top: 0px
+  }
+}
+.school-option {
+  width: 100%;
+  background-color: $bg-color;
+  border: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: white;
+    background-color: $primary;
+  }
+}
+
+.people-option {
+  @extend .school-option;
+  margin-top: 5px;
+}
+.sidebar h3 {
+  margin-top:0;
+  margin-bottom: 10px;
+}
+
+.grade-btn {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border: none;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: white;
+    background-color: $primary;
+  }
+}
+
+.btn-group {
+  width:100%;
+}
+
+#subject-dropdown {
+  background-color: white;
+  border: none;
+  color: #BEBFC2;
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    color: white;
+    background-color: $primary;
+    .caret:hover {
+      color: $bg-color;
+      transform: rotate(360deg);
+    }
+  }
+
+  .caret {
+    color: $primary;
+    transform: rotate(270deg);
+  }
+
 }
