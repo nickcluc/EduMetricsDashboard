@@ -38,6 +38,9 @@ $(document).ready(function() {
     }
     $('.datepicker').on("click", eventHandler);
   }
+  setupUpdater();
+  //
+  //
   // implement Auto Update Time
   // function setupUpdaterTime() {
   //   var input=$("#timepicker"),
@@ -58,6 +61,5 @@ $(document).ready(function() {
   //   }
   //   $('.bfh-timepicker').on("change", eventHandler);
   // }
-  setupUpdater();
   // setupUpdaterTime();
 });
