@@ -1,3 +1,4 @@
+<%= include_gon %>
 <div class="panel panel-no-border">
   <div class="panel-body">
     <div class="col-md-5">
@@ -6,10 +7,10 @@
     <div class="col-md-7">
       <span><small style="padding-left:20px;padding-top:5px;">Period</small></span>
       <div class="pull-right">
-        <button type="button" class="community-btn right" id="">T</button>
-        <button type="button" class="community-btn right" id="button-7-days">7</button>
-        <button type="button" class="community-btn right" id="button-30-days">30</button>
-        <button type="button" class="community-btn right" id="button-365-days">YR</button>
+        <button type="button" class="community-btn right" onclick="refreshChart(5);">T</button>
+        <button type="button" class="community-btn right" onclick="refreshChart(7);">7</button>
+        <button type="button" class="community-btn right" onclick="refreshChart(30);">30</button>
+        <button type="button" class="community-btn right" onclick="refreshChart(365);">YR</button>
         <button type="button" class="community-btn right"><span class="glyphicon glyphicon-calendar"></span></button>
       </div>
     </div>
