@@ -1,6 +1,6 @@
 #Admin Dashboard Sample
 
-https://guarded-bastion-6713.herokuapp.com/
+https://edudashboard.herokuapp.com/
 
 
 ###How to run locally
