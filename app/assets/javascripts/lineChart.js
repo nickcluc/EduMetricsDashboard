@@ -121,23 +121,41 @@ var lineChart2 = c3.generate({
 //   lineChart.toggle(id);
 // }
 //
-// d3.select('#line-options-panel').insert('div', '#line-chart').attr('id', 'line-legend').selectAll('h4')
-//     .data(['data1', 'data2', 'data3'])
-//   .enter().append('h4')
-//     .attr('data-id', function (id) { return id; })
-//     .html(function (id) { return id; })
-//     .each(function (id) {
-//         d3.select(this).style('color', lineChart.color(id));
-//     })
-//     .on('mouseover', function (id) {
-//         lineChart.focus(id);
-//     })
-//     .on('mouseout', function (id) {
-//         lineChart.revert();
-//     })
-//     .on('click', function (id) {
-//         lineChart.toggle(id);
-//     });
+(function($)
+{
+    $.fn.removeStyle = function(style)
+    {
+        var search = new RegExp(style + '[^;]+;?', 'g');
+
+        return this.each(function()
+        {
+            $(this).attr('style', function(i, style)
+            {
+                return style.replace(search, '');
+            });
+        });
+    };
+}(jQuery));
+
+d3.select('#line-options-panel').insert('div', '#line-chart').attr('class', 'legend').selectAll('span')
+    .data(['data1', 'data2', 'data3', 'data4', 'data5', 'data6'])
+  .enter().append('span')
+    .attr('data-id', function (id) { return id; })
+    .each(function (id) {
+      d3.select(this).style('background-color', lineChart.color(id));
+    })
+    .on('mouseover', function (id) {
+        lineChart.focus(id);
+        this.focus();
+    })
+    .on('mouseout', function (id) {
+        lineChart.revert();
+    })
+    .on('click', function (id) {
+      console.log(this)
+      $(this).toggleClass("inactive-circle");
+      lineChart.toggle(id);
+    });
 //
 // d3.select('#results-options').append('li', '#line-chart-2').attr('id', 'line-2-legend').selectAll('li')
 //   .data(['Safety'])
