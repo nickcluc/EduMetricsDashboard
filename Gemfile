@@ -11,7 +11,8 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'responders'
 gem 'gon'
-gem "facets", require: false
+gem 'net-smtp'
+gem 'puma'
 gem 'sdoc', group: :doc
 
 group :development, :test do
